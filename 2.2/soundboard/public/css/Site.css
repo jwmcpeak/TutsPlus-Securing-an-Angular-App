@@ -1,0 +1,83 @@
+﻿.navbar-default {
+    background-color: #2c3e50;
+}
+
+    .navbar-default .navbar-brand {
+        color: #ffffff;
+    }
+
+    .navbar-default .navbar-nav > li > a {
+        color: #ffffff;
+    }
+
+.navbar-fixed-top .navbar-brand {
+    font-size: 1.5em;
+}
+
+.navbar-fixed-top.navbar-shrink .navbar-brand {
+    font-size: 1.2em;
+}
+
+header img {
+    width: 200px;
+    height: 200px;
+}
+
+header .container {
+    padding-top: 90px;
+    padding-bottom: 30px;
+}
+
+.body-content {
+    padding-top: 10px;
+}
+
+.post {
+    background-color: #eee;
+    padding: 10px;
+}
+
+    .post h3 {
+        margin-top: 10px;
+        color: #337ab7;
+        text-transform: uppercase;
+    }
+
+hr {
+    max-width: 150px;
+    border-top: solid 2px #eee;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+    hr:after {
+        font-size: 1em;
+        color: #eee;
+    }
+
+.add-post {
+    background-color: #eee;
+}
+    .add-post .form-group {
+        margin-bottom: 5px;
+    }
+
+    .add-post .btn {
+        margin-bottom: 10px;
+        background-color: #337ab7;
+        border-color: #2e6da4;
+    }
+
+    .add-post .success {
+        color: #337ab7;
+    }
+
+.btn-success {
+    color: #ffffff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+}
+
+.user-admin {
+    font-weight: bold;
+}

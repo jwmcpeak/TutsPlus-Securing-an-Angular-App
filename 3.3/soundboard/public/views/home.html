@@ -1,0 +1,58 @@
+﻿<div class="add-post">
+    <form role="form" ng-submit="save()" ng-if="isLoggedIn()">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h2>Add a New Post</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" id="postTitle" placeholder="Post Title" ng-model="addForm.postTitle" ng-required="true">
+                    </div>
+                    <div class="col-sm-7">
+                        <input type="text" class="form-control" id="postMessage" placeholder="Message" ng-model="addForm.postMessage" ng-required="true">
+                    </div>
+                    <div class="col-sm-2">
+                        <button type="submit" class="btn btn-success">Save</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <span class="success" ng-if="addForm.success">Post saved!</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="row body-content">
+    <div class="col-lg-8 col-lg-offset-2">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2>Posts</h2>
+                <hr>
+            </div>
+        </div>
+        <div ng-if="posts.length > 0">
+            <div ng-repeat="post in posts">
+                <div class="post">
+                    <h3>{{post.title}}</h3>
+                    <div class="row">
+                        <div class="col-sm-9">
+                            <p>{{post.message}}</p>
+                        </div>
+                        <div class="col-sm-3">
+                            {{post.displayName}}<br />
+                            {{post.dateCreated | date:"yyyy-MM-d"}} <a href="#" ng-click="edit(post)" ng-if="getEmail() === post.username">
+                                Edit
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+            </div>
+        </div>
+    </div>
+</div>

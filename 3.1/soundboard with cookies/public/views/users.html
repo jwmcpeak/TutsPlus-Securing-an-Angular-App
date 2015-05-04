@@ -1,0 +1,11 @@
+﻿<div class="container body-content">
+    <div class="col-lg-12 text-center">
+        <h3>Users in the system</h3>
+        <hr>
+    </div>
+    <div class="col-lg-8 col-lg-offset-2">
+        <ul ng-if="users.length > 0">
+            <li ng-repeat="user in users" ng-class="{'user-admin': user.isAdmin}">{{ user.username }} ({{ user.displayName }})</li>
+        </ul>
+    </div>
+</div>
